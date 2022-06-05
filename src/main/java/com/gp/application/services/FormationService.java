@@ -75,7 +75,7 @@ public static final String col_name ="formation";
 	public String deleteFormation(String nom) {
         Firestore dbFirestore = FirestoreClient.getFirestore();
         ApiFuture<WriteResult> collectionApi = dbFirestore.collection(col_name).document(nom).delete();
-        return "Document with Formation ID "+nom+" has been deleted";
+        return "Document with Formation ID "+nom+" has been deleted"+collectionApi;
     }
 
 }

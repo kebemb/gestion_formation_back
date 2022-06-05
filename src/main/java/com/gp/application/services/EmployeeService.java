@@ -75,7 +75,7 @@ public class EmployeeService {
 	public String deleteEmployee(String nom) {
         Firestore dbFirestore = FirestoreClient.getFirestore();
         ApiFuture<WriteResult> collectionApi = dbFirestore.collection(col_name).document(nom).delete();
-        return "Document with Employee ID "+nom+" has been deleted";
+        return "Document with Employee ID "+nom+" has been deleted"+collectionApi;
     }
 
 }

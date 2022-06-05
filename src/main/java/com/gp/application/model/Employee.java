@@ -26,7 +26,7 @@ public class Employee {
 	private String email;
 	private String fonction;
 	private long tel;
-	private float salaire;
+	private String sexe;
 	private String departement ;	
 	
 	/**
@@ -44,11 +44,11 @@ public class Employee {
 	 * @param email
 	 * @param fonction
 	 * @param tel
-	 * @param salaire
 	 * @param departement
+	 * @param sexe
 	 */
 	public Employee(String id, String prenom, String nom, String adresse, String email, String fonction, long tel,
-			float salaire, String departement) {
+			String departement, String sexe) {
 		super();
 		this.id = id;
 		this.prenom = prenom;
@@ -57,8 +57,8 @@ public class Employee {
 		this.email = email;
 		this.fonction = fonction;
 		this.tel = tel;
-		this.salaire = salaire;
 		this.departement = departement;
+		this.sexe = sexe;
 	}
 	
 	
@@ -161,20 +161,7 @@ public class Employee {
 		this.tel = tel;
 	}
 
-	/**
-	 * @return the salaire
-	 */
-	public float getSalaire() {
-		return salaire;
-	}
-
-	/**
-	 * @param salaire the salaire to set
-	 */
-	public void setSalaire(float salaire) {
-		this.salaire = salaire;
-	}
-
+	
 	/**
 	 * @return the departement
 	 */
@@ -188,6 +175,23 @@ public class Employee {
 	public void setDepartement(String departement) {
 		this.departement = departement;
 	}
+	
+	/**
+	 * @return the sexe
+	 */
+	public String getSexe() {
+		return sexe;
+	}
+
+	/**
+	 * @param sexe the sexe to set
+	 */
+	public void setSexe(String sexe) {
+		this.sexe = sexe;
+	}
+
+
+
 
 	//fonction generatrice de cle primaire
 	public String generateString(String alphabet, int length) {

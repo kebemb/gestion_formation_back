@@ -76,6 +76,6 @@ public class DepartementService {
 	public String deleteDepartement(String nom) {
         Firestore dbFirestore = FirestoreClient.getFirestore();
         ApiFuture<WriteResult> collectionApi = dbFirestore.collection(COL_NAME).document(nom).delete();
-        return "Document with Departement ID "+nom+" has been deleted";
+        return "Document with Departement ID "+nom+" has been deleted"+collectionApi;
     }
 }
