@@ -24,11 +24,11 @@ public class FBInitialize {
     public void initialize() {
         try {
             FileInputStream serviceAccount =
-                    new FileInputStream("./gestionpers-571fe-firebase-adminsdk-27rmr-007f46d29b.json");
+                    new FileInputStream("./collab-cb16b-firebase-adminsdk-amiz8-36947551cb.json");
 
+            
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                    .setDatabaseUrl("https://gestionpers-571fe.firebaseio.com")
                     .build();
 
             FirebaseApp.initializeApp(options);
